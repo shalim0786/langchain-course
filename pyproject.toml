@@ -1,5 +1,5 @@
 [project]
-name = "langchain-course"
+name = "hello-world"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-langchain-course = "langchain_course:main"
+hello-world = "hello_world:main"
 
 [build-system]
 requires = ["uv_build>=0.12.18,<0.13.0"]
