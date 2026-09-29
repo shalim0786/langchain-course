@@ -6,8 +6,9 @@ from langchain.agents import create_agent
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
+from tavily import TavilyClient
 
-
+tavily = TavilyClient()
 @tool
 def search(query: str) -> str:
     """
@@ -21,7 +22,7 @@ def search(query: str) -> str:
     """
     print(f"Searching for {query}")
 
-    return "Tokyo weather is sunny"
+    return tavily.search(query=query)
 
 
 llm = ChatGroq(
